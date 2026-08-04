@@ -1,0 +1,4 @@
+---
+rhis_builder_kvm_lz_use_local_defaults_env: true
+rhis_builder_kvm_lz_defaults_env_file: "{{ playbook_dir | dirname }}/defaults/env.yml"
+rhis_builder_kvm_lz_local_defaults_precedence: "noninteractive"

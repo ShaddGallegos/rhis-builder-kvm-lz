@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  roles:
+    - role: minirhis_installer
+      vars:
+        rhis_container_name: "mrhis-provisioner"
+        demo_admin_password: "{{ demo_admin_password | default(sat_admin_pass | default(global_admin_password | default(''))) }}"
